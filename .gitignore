@@ -1,0 +1,16 @@
+*.swp
+*.pb.go
+!mocks/**/*.pb.go
+coverage.out
+/service-thrift-go/
+/service-proto-gen/
+/service-proto-gen-placeholder/
+/vendor/
+/artifacts/
+/fakes/
+.idea
+*.iml
+/.cache/
+
+# TLS key and cert
+config/secret/tls-wildcard-taservs-net-unsigned/
