@@ -6,6 +6,26 @@ import (
 )
 
 func main() {
+
+	// prometheus exporter
+	if false {
+		startPrometheusServer()
+	}
+
+	// expvar exporter
+	if false {
+		monitoringSomeExpvar()
+	}
+
+	// telemetry
+	if true {
+		startTelemetry()
+	}
+}
+
+func startPrometheusServer() {
 	http.Handle("/metrics", promhttp.Handler())
-	http.ListenAndServe(":2112", nil)
+	go func() {
+		http.ListenAndServe(":8888", nil)
+	}()
 }
